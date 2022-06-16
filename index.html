@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Site Cleaner</title>
+    <link rel="icon" type="image" href="img/Favicon.png">
+    <link href="dependencies/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <script type="text/javascript" src="dependencies/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="helperFunctions.js"></script>
+    <script src="dependencies/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-secondary">
+        
+                <!-- Modal Header -->
+                <div class="modal-header text-light">
+                <h4 class="modal-title">Instructions</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body text-white-50">
+                    Use the <b>Ctrl+Shift+C</b> combination to activate the browser's in-built system of highlighthing and selecting. Once you select an element on the page by single clicking, the element will be highlighted in the 'Elements' section of the tools provided. This will help you to choose the best term to add to the list. Try to find the biggest containing element with the most specific 'class' or 'id' to choose as a unique term to remove. Please note: adding generic terms will often remove large sections or whole pages from view. When in doubt have your exported back-up ready and wipe the memory fresh if needed. Good Luck.
+                </div>
+        
+                <!-- Modal footer -->
+                <div class="modal-footer text-light">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid border border-3" id="bg">
+        <h1 id="siteHeading" data-bs-toggle="modal" data-bs-target="#myModal" class="my-2">Static Site Cleaner</h1>
+        <!-- <h1 title="Instructions:" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Good Luck." id="siteHeading">Static Site Cleaner</h1> -->
+        <!-- <button type="button" class="btn btn-secondary" id="siteHeading" data-bs-toggle="modal" data-bs-target="#myModal">Static Site Cleaner</button> -->
+        <div id="mainHeader" class="my-2"></div>
+        <div id="comms" class="card justify-content-center overlay"></div>
+
+        <button id="import" type="button" class="btn btn-dark btn-xs mx-2">Import</button>
+        <button id="export" type="button" class="btn btn-dark btn-xs mx-2">Export</button>
+        <button id="wipe" type="button" class="btn btn-danger btn-xs mx-4">Wipe Memory</button>
+        <hr>
+        <div>
+            <form class="d-grid">
+                <label for="display" class="form-label">These are the current flags:</label>
+                <select multiple class="form-select" id="display"></select>
+                <button id="removeTerm" type="button" class="btn btn-danger btn-block">Remove</button>
+            </form>
+        </div>
+        <hr>
+        <div class="d-grid">
+            <form>
+                <label>Choose a type:</label>
+                <select id="chooseTerm" class="form-select">
+                    <option value="class">Class</option>
+                    <option value="id"> ID </option>
+                </select>
+                
+                <label for="newTerm">Term to add: (no-spaces/no-leading-numeral)</label>
+                <input class="input-group" type="text" id="newTerm">
+            </form><br>
+            <button id="addTerm" type="button" class="btn btn-primary btn-block">Add</button>
+        </div>
+        <br>
+    </div>
+</body>
+</html>
