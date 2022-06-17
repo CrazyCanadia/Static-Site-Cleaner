@@ -12,6 +12,7 @@ git clone https://github.com/CrazyCanadia/Static-Site-Cleaner.git
 OR download the zip from:
 ```
 https://github.com/CrazyCanadia/Static-Site-Cleaner
+```
 
 
 
@@ -27,7 +28,6 @@ After downloading the files you need to navigate to chrome's extension manager -
 
 5. You are ready to start de-cluttering your browsing experience.
 
-```
 
 
 ## How to use it?
